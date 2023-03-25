@@ -6,6 +6,10 @@ const foods = require("./models/food");
 app.set('view engine', 'ejs');
 const PORT = 3000;
 
+app.get('/', (req, res) => {
+    res.send('This is the Gitpub!');
+})
+
 app.get('/drinks', (req, res) => {
     res.render("drinks_index", {drinks});
 })
